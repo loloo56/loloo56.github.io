@@ -1,35 +1,20 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>GiftMatch Box – Persönliche Geschenkideen</title>
-
-<meta name="description" content="GiftMatch Box – personalisierte Geschenkideen für jeden Anlass. Ein studentisches Hochschulprojekt.">
+<title>GiftMatch – Persönliche Geschenkideen</title>
+<meta name="description" content="GiftMatch – personalisierte Geschenkideen für jeden Anlass. Ein studentisches Hochschulprojekt.">
 
 <style>
-
 :root {
-
   --pink:#b65d80;
-
   --darkpink:#873c5d;
-
   --text:#332b35;
-
   --muted:#726675;
-
   --background:#fffaf8;
-
   --soft:#f8edf2;
-
   --border:#eddfe7;
-
 }
 
 * { box-sizing:border-box; }
@@ -37,83 +22,51 @@
 html { scroll-behavior:smooth; }
 
 body {
-
   margin:0;
-
   font-family:Arial,Helvetica,sans-serif;
-
   background:var(--background);
-
   color:var(--text);
-
   line-height:1.6;
-
 }
 
 a { text-decoration:none;color:inherit; }
 
 .container {
-
   width:92%;
-
   max-width:1100px;
-
   margin:auto;
-
 }
 
 /* NAVIGATION */
 
 header {
-
   background:#ffffffef;
-
   position:sticky;
-
   top:0;
-
   z-index:100;
-
   border-bottom:1px solid var(--border);
-
 }
 
 nav {
-
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
   gap:20px;
-
   padding:20px 0;
-
 }
 
 .logo {
-
   font-size:26px;
-
   font-weight:800;
-
   color:var(--darkpink);
-
 }
 
 .menu {
-
   display:flex;
-
   flex-wrap:wrap;
-
   gap:20px;
-
   font-size:14px;
-
   font-weight:bold;
-
 }
 
 .menu a:hover { color:var(--pink); }
@@ -121,505 +74,298 @@ nav {
 /* STARTSEITE */
 
 .hero {
-
   background:linear-gradient(120deg,#fff5f4,#f9e7ef,#f2e8f4);
-
   padding:78px 0;
-
 }
 
 .hero-grid {
-
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   align-items:center;
-
   gap:45px;
-
 }
 
 .label {
-
   font-size:12px;
-
   letter-spacing:2px;
-
   text-transform:uppercase;
-
   font-weight:bold;
-
   color:var(--darkpink);
-
 }
 
 h1 {
-
   font-size:clamp(40px,5vw,65px);
-
   line-height:1.12;
-
   margin:18px 0;
-
 }
 
 h1 span { color:var(--pink); }
 
 .lead {
-
   font-size:18px;
-
   color:#605461;
-
 }
 
 .button {
-
   display:inline-block;
-
   background:var(--pink);
-
   color:white;
-
   padding:14px 27px;
-
   border-radius:35px;
-
   font-weight:bold;
-
   margin-top:18px;
-
   transition:0.2s;
-
 }
 
 .button:hover {
-
   background:var(--darkpink);
-
   transform:translateY(-2px);
-
 }
 
 .note {
-
   margin-top:17px;
-
   font-size:13px;
-
   color:var(--muted);
-
 }
 
 .hero-image {
-
   border-radius:25px;
-
   overflow:hidden;
-
   box-shadow:0 15px 35px #70445624;
-
 }
 
 .hero-image img {
-
   display:block;
-
   width:100%;
-
   height:470px;
-
   object-fit:cover;
-
 }
 
 /* ALLGEMEINE ABSCHNITTE */
 
 section {
-
   padding:75px 0;
-
   scroll-margin-top:95px;
-
 }
 
 .soft { background:var(--soft); }
 
 .heading {
-
   text-align:center;
-
   max-width:750px;
-
   margin:0 auto 38px;
-
 }
 
 .heading h2 {
-
   font-size:clamp(30px,3vw,42px);
-
   line-height:1.2;
-
   margin:12px 0;
-
 }
 
 .heading p {
-
   color:var(--muted);
-
   font-size:16px;
-
 }
 
 /* PITCH VIDEO */
 
 .video-card {
-
   max-width:850px;
-
   margin:auto;
-
   padding:20px;
-
   background:white;
-
   border-radius:23px;
-
   border:1px solid var(--border);
-
   box-shadow:0 12px 30px #50304410;
-
 }
 
 .video-placeholder {
-
   width:100%;
-
   aspect-ratio:16/9;
-
   background:#302a35;
-
   border-radius:17px;
-
   display:flex;
-
   flex-direction:column;
-
   justify-content:center;
-
   align-items:center;
-
   text-align:center;
-
   color:white;
-
   padding:30px;
-
 }
 
 .play-symbol {
-
   width:65px;
-
   height:65px;
-
   border:2px solid white;
-
   border-radius:50%;
-
   display:grid;
-
   place-items:center;
-
   font-size:28px;
-
   margin-bottom:18px;
-
 }
 
 .video-frame {
-
   display:block;
-
   width:100%;
-
   aspect-ratio:16/9;
-
   border:0;
-
   border-radius:17px;
-
 }
 
 /* SO FUNKTIONIERT'S */
 
 .steps {
-
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
   gap:22px;
-
 }
 
 .step {
-
   background:white;
-
   border:1px solid var(--border);
-
   border-radius:22px;
-
   padding:30px 23px;
-
   text-align:center;
-
   box-shadow:0 8px 25px #50304409;
-
 }
 
 .number {
-
   width:52px;
-
   height:52px;
-
   display:grid;
-
   place-items:center;
-
   margin:0 auto 18px;
-
   border-radius:50%;
-
   color:white;
-
   background:var(--darkpink);
-
   font-weight:bold;
-
   font-size:21px;
-
 }
 
 .step h3 {
-
   font-size:22px;
-
   margin:10px 0;
-
 }
 
 .step p {
-
   color:var(--muted);
-
   font-size:15px;
-
 }
 
 /* GESCHENKBOXEN */
 
 .gift-grid {
-
   display:grid;
-
   grid-template-columns:repeat(2,1fr);
-
   gap:25px;
-
 }
 
 .gift-card {
-
   background:white;
-
   border:1px solid var(--border);
-
   border-radius:23px;
-
   overflow:hidden;
-
   box-shadow:0 12px 30px #50304412;
-
   transition:transform 0.2s;
-
 }
 
 .gift-card:hover {
-
   transform:translateY(-5px);
-
 }
 
 .gift-card img {
-
   display:block;
-
   width:100%;
-
   height:340px;
-
   object-fit:cover;
-
   object-position:center;
-
   background:#f6edf1;
-
 }
 
 .gift-content {
-
   padding:24px;
-
 }
 
 .gift-content h3 {
-
   font-size:25px;
-
   margin:0 0 10px;
-
   color:var(--darkpink);
-
 }
 
 .gift-content p {
-
   color:var(--muted);
-
   margin:0;
-
 }
 
 .tag {
-
   display:inline-block;
-
   background:#f8e9ef;
-
   color:var(--darkpink);
-
   padding:6px 14px;
-
   border-radius:25px;
-
   font-size:13px;
-
   font-weight:bold;
-
   margin-top:16px;
-
 }
 
 .disclaimer {
-
   text-align:center;
-
   font-size:13px;
-
   color:var(--muted);
-
   margin-top:35px;
-
 }
 
 /* FOOTER */
 
 footer {
-
   background:#332936;
-
   text-align:center;
-
   color:white;
-
   padding:35px 15px;
-
 }
 
 footer p {
-
   font-size:13px;
-
   color:#e0d2dd;
-
 }
 
 /* HANDY UND TABLET */
 
 @media(max-width:850px) {
-
   .hero-grid {
-
     grid-template-columns:1fr;
-
   }
-
   .steps {
-
     grid-template-columns:1fr;
-
   }
-
   .hero-image img {
-
     height:350px;
-
   }
-
 }
 
 @media(max-width:600px) {
-
   nav {
-
     flex-direction:column;
-
     align-items:flex-start;
-
   }
-
   .menu {
-
     gap:13px;
-
     font-size:13px;
-
   }
-
   .gift-grid {
-
     grid-template-columns:1fr;
-
   }
-
   .gift-card img {
-
     height:290px;
-
   }
-
   .hero {
-
     padding:50px 0;
-
   }
-
   section {
-
     padding:55px 0;
-
   }
-
 }
-
 </style>
-
 </head>
 
 <body>
@@ -627,25 +373,18 @@ footer p {
 <!-- NAVIGATION -->
 
 <header>
-
 <nav class="container">
 
-<a href="#home" class="logo">GiftMatch Box</a>
+<a href="#home" class="logo">GiftMatch</a>
 
 <div class="menu">
-
 <a href="#home">Startseite</a>
-
 <a href="#video">Pitch-Video</a>
-
 <a href="#ablauf">So funktioniert's</a>
-
 <a href="#geschenke">Geschenkideen</a>
-
 </div>
 
 </nav>
-
 </header>
 
 <main>
@@ -653,173 +392,114 @@ footer p {
 <!-- HOME -->
 
 <section class="hero" id="home">
-
 <div class="container hero-grid">
 
 <div>
-
 <span class="label">
-
 PERSÖNLICHE GESCHENKE MIT LIEBE
-
 </span>
 
 <h1>
-
 Finde das
-
 <span>perfekte Geschenk.</span>
-
 </h1>
 
 <p class="lead">
-
 Du suchst ein besonderes Geschenk, aber dir
-
 fehlt die passende Idee?
 
-GiftMatch Box hilft dir, persönliche
-
+GiftMatch hilft dir, persönliche
 Geschenkbox-Ideen zu entdecken – passend
-
 zum Anlass, zu deinem Budget und zu den
-
 Wünschen der beschenkten Person.
-
 </p>
 
 <p>
-
 Besonders für Studierende und junge
-
 Erwachsene, die Familie und Freunde
-
 mit einer liebevollen Überraschung
-
 glücklich machen möchten.
-
 </p>
 
 <a class="button"
-
 href="https://calendly.com/fatimalilas059/30min"
-
 target="_blank"
-
 rel="noopener noreferrer">
-
 Jetzt kostenloses Gespräch buchen
-
 </a>
 
 <p class="note">
-
 Studentisches Demo-Projekt ·
-
 Keine echten Bestellungen ·
-
 Keine Zahlungsfunktion
-
 </p>
 
 </div>
 
 <div class="hero-image">
-
 <img
-
 src="giftmatch-hero.jpg"
-
 alt="Liebevoll zusammengestellte Geschenkbox mit Blumen, Schokolade und Wellnessprodukten">
-
 </div>
 
 </div>
-
 </section>
 
 <!-- PITCH VIDEO -->
 
 <section id="video">
-
 <div class="container">
 
 <div class="heading">
-
 <span class="label">UNSER PITCH</span>
 
 <h2>
-
-Entdecke GiftMatch in 45 Sekunden
-
+Entdecke GiftMatch
 </h2>
 
 <p>
-
 Manchmal ist es schwierig, das passende
-
 Geschenk zu finden.
 
 In unserem kurzen Pitch-Video zeigen wir,
-
-wie GiftMatch Box die Geschenksuche
-
+wie GiftMatch die Geschenksuche
 einfacher und persönlicher machen möchte.
-
 </p>
-
 </div>
 
 <div class="video-card">
 
 <div class="video-placeholder" id="pitch-video">
-
 <div class="play-symbol">▶</div>
-
 <h3>Unser GiftMatch Pitch-Video</h3>
-
 <p>Hier erscheint unser Video.</p>
-
 </div>
 
 <p class="disclaimer">
-
 Das Pitch-Video wird nach der Fertigstellung
-
 hier direkt eingebettet.
-
 </p>
 
 </div>
-
 </div>
-
 </section>
 
 <!-- SO FUNKTIONIERT'S -->
 
 <section class="soft" id="ablauf">
-
 <div class="container">
 
 <div class="heading">
-
 <span class="label">SO FUNKTIONIERT GIFTMatch</span>
 
 <h2>
-
 In drei Schritten zur Geschenkidee
-
 </h2>
 
 <p>
-
 Unser Konzept verbindet persönliche Wünsche
-
 mit passenden Geschenkideen.
-
 </p>
-
 </div>
 
 <div class="steps">
@@ -831,11 +511,8 @@ mit passenden Geschenkideen.
 <h3>Termin buchen</h3>
 
 <p>
-
 Buche über Calendly ein kostenloses
-
 Online-Gespräch mit unserem Projektteam.
-
 </p>
 
 </div>
@@ -847,13 +524,9 @@ Online-Gespräch mit unserem Projektteam.
 <h3>Wünsche besprechen</h3>
 
 <p>
-
 Erzähle uns, für wen du ein Geschenk
-
 suchst, zu welchem Anlass und mit
-
 welchem Budget.
-
 </p>
 
 </div>
@@ -865,27 +538,20 @@ welchem Budget.
 <h3>Geschenkideen entdecken</h3>
 
 <p>
-
 Wir stellen passende Geschenkbox-Ideen
-
 vor und freuen uns über dein Feedback
-
 zu unserem Konzept.
-
 </p>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <!-- UNSERE GESCHENKIDEEN -->
 
 <section id="geschenke">
-
 <div class="container">
 
 <div class="heading">
@@ -893,21 +559,15 @@ zu unserem Konzept.
 <span class="label">UNSERE GESCHENKIDEEN</span>
 
 <h2>
-
 Für jeden Anlass eine besondere Idee
-
 </h2>
 
 <p>
-
 Ob Geburtstag, Hochzeit, Geburt oder
-
 eine kleine Auszeit:
 
 Entdecke, wie unterschiedlich
-
 personalisierte Geschenkboxen aussehen können.
-
 </p>
 
 </div>
@@ -919,11 +579,8 @@ personalisierte Geschenkboxen aussehen können.
 <article class="gift-card">
 
 <img
-
 src="selfcare-box.jpg"
-
 loading="lazy"
-
 alt="Self-Care-Geschenkbox mit Kerze, Lavendel, Pflegeprodukten und Handtuch">
 
 <div class="gift-content">
@@ -931,27 +588,18 @@ alt="Self-Care-Geschenkbox mit Kerze, Lavendel, Pflegeprodukten und Handtuch">
 <h3>Self-Care-Box</h3>
 
 <p>
-
 Eine liebevolle Auszeit vom Alltag.
-
 Diese Box enthält beispielhaft
-
 Wellnessprodukte, eine Duftkerze,
-
 Badeprodukte und kleine
-
 Überraschungen zum Entspannen.
-
 </p>
 
 <span class="tag">
-
 Wellness & Entspannung
-
 </span>
 
 </div>
-
 </article>
 
 <!-- GEBURTSTAGSBOX -->
@@ -959,11 +607,8 @@ Wellness & Entspannung
 <article class="gift-card">
 
 <img
-
 src="geburtstagsbox.jpg"
-
 loading="lazy"
-
 alt="Bunte Geburtstagsbox mit Süßigkeiten, Blumen, Kerze, Tasse und Geburtstagskarte">
 
 <div class="gift-content">
@@ -971,29 +616,20 @@ alt="Bunte Geburtstagsbox mit Süßigkeiten, Blumen, Kerze, Tasse und Geburtstag
 <h3>Geburtstagsbox</h3>
 
 <p>
-
 Eine fröhliche Geburtstagsüberraschung
-
 mit Süßigkeiten, Blumen,
-
 einer persönlichen Karte und
-
 liebevoll ausgewählten Kleinigkeiten.
 
 Eine Idee für Freundinnen,
-
 Freunde und Familie.
-
 </p>
 
 <span class="tag">
-
 Geburtstag
-
 </span>
 
 </div>
-
 </article>
 
 <!-- HOCHZEITSBOX -->
@@ -1001,11 +637,8 @@ Geburtstag
 <article class="gift-card">
 
 <img
-
 src="hochzeitsbox.jpg"
-
 loading="lazy"
-
 alt="Elegante Hochzeitsbox mit Rosen, Gläsern, Pralinen und Kerze">
 
 <div class="gift-content">
@@ -1013,29 +646,20 @@ alt="Elegante Hochzeitsbox mit Rosen, Gläsern, Pralinen und Kerze">
 <h3>Hochzeitsbox</h3>
 
 <p>
-
 Eine elegante Geschenkidee
-
 für ein Brautpaar.
 
 Mit romantischen Details,
-
 Blumen, Pralinen und kleinen
-
 Erinnerungen an einen
-
 besonderen Tag.
-
 </p>
 
 <span class="tag">
-
 Hochzeit
-
 </span>
 
 </div>
-
 </article>
 
 <!-- BABYBOX -->
@@ -1043,11 +667,8 @@ Hochzeit
 <article class="gift-card">
 
 <img
-
 src="babybox.jpg"
-
 loading="lazy"
-
 alt="Liebevolle Babybox mit Teddybär, Babydecke, Söckchen und Schnuller">
 
 <div class="gift-content">
@@ -1055,45 +676,31 @@ alt="Liebevolle Babybox mit Teddybär, Babydecke, Söckchen und Schnuller">
 <h3>Babybox</h3>
 
 <p>
-
 Eine liebevolle Überraschung
-
 zur Geburt eines Babys.
 
 Mit Kuscheltier, weicher
-
 Babydecke, Söckchen und
-
 kleinen praktischen
-
 Geschenkideen für die ersten Monate.
-
 </p>
 
 <span class="tag">
-
 Geburt & Baby
-
 </span>
 
 </div>
-
 </article>
 
 </div>
 
 <p class="disclaimer">
-
 Alle Geschenkboxen sind Beispielideen
-
 im Rahmen unseres Hochschulprojekts.
-
 Es werden keine Produkte verkauft.
-
 </p>
 
 </div>
-
 </section>
 
 </main>
@@ -1101,43 +708,30 @@ Es werden keine Produkte verkauft.
 <!-- FOOTER -->
 
 <footer>
-
 <div class="container">
 
 <strong>
-
-GiftMatch Box
-
+GiftMatch
 </strong>
 
 <p>
-
 Ein Hochschulprojekt an der htw saar
-
 </p>
 
 <p>
-
 Persönliche Geschenkideen mit Liebe
-
 </p>
 
 <p>
-
 Keine echten Bestellungen ·
-
 Keine Zahlungsfunktion
-
 </p>
 
 <p>
-
-© 2026 GiftMatch Box
-
+© 2026 GiftMatch
 </p>
 
 </div>
-
 </footer>
 
 <!-- YOUTUBE VIDEO -->
@@ -1145,17 +739,13 @@ Keine Zahlungsfunktion
 <script>
 
 /*
-
 Hier später die echte Video-ID einfügen.
 
 Beispiel:
-
 https://www.youtube.com/watch?v=AbCdEfGh123
 
 Dann:
-
 const YOUTUBE_ID = "AbCdEfGh123";
-
 */
 
 const YOUTUBE_ID = "";
@@ -1167,25 +757,18 @@ if (/^[A-Za-z0-9_-]{11}$/.test(YOUTUBE_ID)) {
   iframe.className = "video-frame";
 
   iframe.src =
-
   "https://www.youtube-nocookie.com/embed/" +
-
   YOUTUBE_ID;
 
   iframe.title = "GiftMatch Pitch-Video";
-
   iframe.loading = "lazy";
-
   iframe.allowFullscreen = true;
 
   document.getElementById("pitch-video")
-
     .replaceWith(iframe);
-
 }
 
 </script>
 
 </body>
-
 </html>
